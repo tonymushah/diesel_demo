@@ -1,9 +1,9 @@
 use self::models::*;
 use diesel::prelude::*;
 use diesel_demo::*;
+use self::schema::posts::dsl::*;
 
 fn main() {
-    use self::schema::posts::dsl::*;
 
     let connection = &mut establish_connection();
     let results = posts
